@@ -9,8 +9,7 @@ for A in range(2):
     for C in range(2):
      for D in range(2):
          X = 0
-         if A and B:
-          X = 1
+         if not(A) and B and C and not(A or D):
+            X = 1
  
-    print(A,B,C,D,'|', X)
-            
+         print(A,B,C,D,'|', X)
