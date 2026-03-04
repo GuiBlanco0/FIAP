@@ -1,15 +1,11 @@
-A = 0
-B = 0
-C = 0
-D = 0
+#A security system opens the door only when the card
+#and the fingerprint matches, or if the emergency key was used (C = 1)
+#Logical expression - A*B+C = X
+card = 0
+fgp = 0
+key = 1
 
-print("A B C D | X")
-for A in range(2):
-  for B in range(2):
-    for C in range(2):
-     for D in range(2):
-         X = 0
-         if not(A) and B and C and not(A or D):
-            X = 1
- 
-         print(A,B,C,D,'|', X)
+if card * fgp + key:
+    print("OPEN DOOR")
+else:
+    print("CLOSED DOOR")
