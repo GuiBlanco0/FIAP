@@ -1,24 +1,19 @@
 #include <stdio.h>
-#include <string.h>
 
-struct myStructure {
-  int myNum;
-  char myLetter;
-  char myString[30];
+struct Car {
+  char brand[30];
+  char model[30];
+  int year;
 };
 
 int main() {
-  struct myStructure s1 = {13, 'B', "Some text"};
+  struct Car car1  = {"BMW", "X5", 1999};
+  struct Car car2  = {"Ford", "Mustang", 1969};
+  struct Car car3  = {"Toyota", "Corolla", 2011};
 
-  struct myStructure s2;
+  printf("%s %s %d\n", car1.brand, car1.model, car1.year);
+  printf("%s %s %d\n", car2.brand, car2.model, car2.year);
+  printf("%s %s %d\n", car3.brand, car3.model, car3.year);
 
-  s2 = s1;
-
-  s2.myNum = 30;
-  s2.myLetter = 'C';
-  strcpy(s2.myString, "Something else");
-
-  printf("%d %c %s\n", s1.myNum, s1.myLetter, s1.myString);
-  printf("%d %c %s\n", s2.myNum, s2.myLetter, s2.myString);
   return 0;
 }
