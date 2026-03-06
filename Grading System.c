@@ -1,10 +1,10 @@
 #include <stdio.h>
-
+ 
 int main() {
     int students; int grades[50]; char names[50][50]; int sum = 0; double med; int position = 0;
     printf("Digite a quantidade de alunos: ");
     scanf("%d", &students);
-
+ 
     while (students > 50 || students <= 0) {
         printf("Quantidade invalida, digite novamente: ");
         scanf("%d", &students);
@@ -43,9 +43,9 @@ int main() {
         }
     }
     printf("A media da turma e: %.1f", med);
-    printf("\nA maior nota e %d e esta na posição %d, e pertence ao aluno %s\nE a menor nota e %d", grades[position], position + 1, names[position], smallest_grade);
-    printf("\nA quantidade de alunos que passou e: %d\nA quantidade de alunos reprovados e: %d", pass_count, reprove_count);
-
-
+    printf("\nA maior nota é %d e este na posição %d, e pertence ao aluno %s\nE a menor nota e %d", grades[position], position + 1, names[position], smallest_grade);
+    printf("\nA quantidade de alunos que passou é: %d\nA quantidade de alunos reprovados e: %d", pass_count, reprove_count);
+ 
+ 
     return 0;
 }
