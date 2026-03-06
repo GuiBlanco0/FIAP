@@ -6,10 +6,22 @@ struct myStructure {
 };
 int main(){
     struct myStructure s1;
-
+    s1.myNum = 15;
+    s1.myLetter = "A";
     strcpy(s1.myString, "Some text");
 
+    struct myStructure s2;
+    s2 = s1;
 
-    printf("My Letter: %s", s1.myString);
+    printf("%d %c %s", s2.myNum, s2.myLetter, s2.myString)
+
+
+
+
+
+
     return 0;
 }
+
+
+
